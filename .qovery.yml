@@ -1,0 +1,11 @@
+---
+application:
+  name: "webapp-gin"
+  project: "webapp-gin"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-webapp-gin"
+  routes:
+  - application_name: "webapp-gin"
+    paths:
+    - "/*"
