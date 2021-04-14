@@ -6,7 +6,10 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-var db = make(map[string]string)
+var (
+	r  = gin.Default()
+	db = make(map[string]string)
+)
 
 func setupRouter() *gin.Engine {
 	// Disable Console Color
@@ -68,12 +71,7 @@ func setupRouter() *gin.Engine {
 }
 
 func main() {
-	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
+	routes.addPingRoutes(r)
 
 	v1 := r.Group("/v1")
 	{

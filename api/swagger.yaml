@@ -1,0 +1,18 @@
+  # A Swagger 2.0 (a.k.a. OpenAPI) definition of the Sample Webapp API.
+
+swagger: "3.0"
+schemes:
+  - "http"
+  - "https"
+produces:
+  - "application/json"
+  - "text/plain"
+consumes:
+  - "application/json"
+  - "text/plain"
+basePath: "/"
+info:
+  title: "Webapp Gin"
+  version: "1.0-beta"
+  description: |
+    This is a sample dockerized webapp built using golang and Gin framework
