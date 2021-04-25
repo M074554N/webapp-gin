@@ -71,8 +71,6 @@ func setupRouter() *gin.Engine {
 }
 
 func main() {
-	routes.addPingRoutes(r)
-
 	v1 := r.Group("/v1")
 	{
 		v1.GET("/", apiRoot)
