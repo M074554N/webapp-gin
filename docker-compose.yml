@@ -4,8 +4,8 @@ services:
     app:
         build: 
             context: ./
-            dockerfile: ./
+            dockerfile: ./Dockerfile
         container_name: webapp_gin
         ports:
-            - 8080:80
+            - 80:80
         
